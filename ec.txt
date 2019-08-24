@@ -1,2 +1,6 @@
 este es un ejemplo de clase
 
+prueba1
+prueba2
+
+
