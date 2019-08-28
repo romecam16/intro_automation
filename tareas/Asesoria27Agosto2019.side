@@ -1,0 +1,131 @@
+{
+  "id": "ea9badd3-e59f-4f17-811f-55109d99aadb",
+  "version": "2.0",
+  "name": "Asesoria27Agosto2019",
+  "url": "http://localhost:5000",
+  "tests": [{
+    "id": "09fb01c2-6692-4bfa-906d-2e6751f1651f",
+    "name": "booking flight",
+    "commands": [{
+      "id": "27f2115d-d181-4ea4-9772-da80020362d7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c2269af-7e68-4302-85d6-700ff7d81169",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x713",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "953354e5-36ac-4757-97c3-9eba0bb673bb",
+      "comment": "",
+      "command": "click",
+      "target": "name=flight_id",
+      "targets": [
+        ["name=flight_id", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//select[@name='flight_id']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c448ced0-3d3e-4c9a-b6f5-8b2b8c03ec99",
+      "comment": "",
+      "command": "select",
+      "target": "name=flight_id",
+      "targets": [],
+      "value": "label=Istanbul to Tokyo"
+    }, {
+      "id": "c847cb14-cdf9-4b5e-8216-9edb17f06df9",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f1e737b-9d75-4bee-81e7-14d295f8a842",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Angela Valbuena"
+    }, {
+      "id": "2867e210-75f2-476d-8932-bc93fccc5c4e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Book Flight')]",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Book Flight')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6109ed9-a612-40e4-90c1-58bf590cacee",
+      "comment": "",
+      "command": "assertText",
+      "target": "//h1",
+      "targets": [],
+      "value": "Success!"
+    }, {
+      "id": "47988e74-0706-40dc-ab5b-760f676c74f5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(., 'You have successfully booked your flight.')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47068b6a-2fe2-49d2-8861-ff84c68cc839",
+      "comment": "",
+      "command": "open",
+      "target": "/flights",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ca9e921-e342-4881-a099-9aa3e461ac5d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Istanbul to Tokyo",
+      "targets": [
+        ["linkText=Istanbul to Tokyo", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Istanbul to Tokyo')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/flights/3')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Istanbul to Tokyo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2464903-abd8-4d92-beaf-4adf7c6214f1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//li[contains(.,'Angela Valbuena')]",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "cd16e231-9f49-420c-9067-549e3aa41ee0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["09fb01c2-6692-4bfa-906d-2e6751f1651f"]
+  }],
+  "urls": ["http://localhost:5000/"],
+  "plugins": []
+}
